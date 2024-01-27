@@ -1,0 +1,15 @@
+{
+	"Python Template": {
+		"prefix": "a",
+		"body": [
+			"def main():",
+			"    $0",
+			"",
+			"",
+			"if __name__ == \"__main__\":",
+			"    main()",
+			""
+		],
+		"description": "Python Base Template"
+	}
+}

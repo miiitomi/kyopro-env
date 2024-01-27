@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "(lldb) C++ debug",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "args": [],
+            "cwd": "${fileDirname}",
+            "stdio": [
+                "${fileDirname}/input.txt"
+            ],
+            "initCommands": [
+                "settings set target.disable-aslr false"
+            ],
+            "preLaunchTask": "g++ build active file"
+        },
+        {
+            "name": "Python debug",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "<",
+                "${fileDirname}/input.txt"
+            ]
+        }
+    ]
+}

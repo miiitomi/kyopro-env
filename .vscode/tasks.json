@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+            "type": "shell",
+            "label": "g++ build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "${file}",
+                "-g",
+                "-O0",
+                "-std=c++23",
+                "-I",
+                "${workspaceFolder}/ac-library",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.out"
+            ],
+            "group": "build"
+        },
+		{
+            "label": "submit",
+            "group": "build",
+            "type": "shell",
+            "command": "${workspaceFolder}/submit.sh",
+            "args": [
+				"${fileBasenameNoExtension}",
+				"${file}",
+				"${relativeFileDirname}",
+                "${fileExtname}"
+            ]
+        },
+        {
+            "label": "test",
+            "group": "build",
+            "type": "shell",
+            "command": "${workspaceFolder}/test.sh",
+            "args": [
+				"${fileBasenameNoExtension}",
+				"${fileExtname}",
+				"${file}",
+				"${relativeFileDirname}",
+                "${workspaceFolder}/ac-library"
+            ]
+        }
+	]
+}

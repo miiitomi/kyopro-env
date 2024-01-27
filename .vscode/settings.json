@@ -1,0 +1,6 @@
+{
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ $fileName -std=gnu++23 -Wall -Wextra -O2 -I $workspaceRoot/ac-library -o $fileNameWithoutExt.out && ./$fileNameWithoutExt.out < input.txt",
+        "python": "cd $dir && python3 -u $fileName < input.txt"
+    }
+}
