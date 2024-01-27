@@ -4,8 +4,6 @@
 
 ## ディレクトリ構成
 
-ディレクトリ構成は以下の通りです．[こちら](https://github.com/miiitomi/kyopro-env/)からすべてコピーしてきてください．
-
 ```sh
 .
 ├── .devcontainer
@@ -29,13 +27,6 @@
 ├── submit.sh                  # 自動提出用スクリプト
 └── test.sh                    # 自動テスト用スクリプト
 ```
-
-ac-libraryについては，gitを用いている場合は
-```sh
-git submodule add -b production git@github.com:atcoder/ac-library.git
-```
-とサブモジュールとして追加するのが楽だと思います．
-
 
 ## VSCodeからdocker containerで開くまで
 
