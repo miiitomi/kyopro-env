@@ -9,7 +9,7 @@
                 "${file}",
                 "-g",
                 "-O0",
-                "-std=c++23",
+                "-std=gnu++23",
                 "-I",
                 "${workspaceFolder}/ac-library",
                 "-o",
